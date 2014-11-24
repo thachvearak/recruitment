@@ -17,6 +17,10 @@
 	<script src="{{asset('assets/js/bootstrap/bootstrap.min.js')}}"></script>
 </head>
 <body>
-	@yield('header')
+	<div class="container">
+		@yield('header')
+		@yield('body')
+		@include('layouts.footer')	
+	</div>
 </body>
 </html>
