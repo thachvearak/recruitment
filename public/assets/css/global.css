@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.menu ul li:hover ul{
+	display: block;
+}
+.top-menu {
+	width: 100%;
+	color: #95c141;
+}
+.company-logo a{
+	display: block;
+	width: 191px;
+	height: 100px;
+	background: url(/assets/images/company-log.jpg) 0 0 no-repeat;
+}
