@@ -9,6 +9,7 @@
 	<!--  <link rel="stylesheet" href="{{asset('assets/css/jquery-ui.css')}}"> -->
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap/bootstrap.min.css')}}">
 	<link rel="stylesheet" href="{{asset('assets/css/bootstrap/bootstrap-theme.min.css')}}">
+	<link rel="stylesheet" href="{{asset('assets/css/global.css')}}">
 	
 	<!-- JS -->
 	<script src="{{asset('assets/js/jquery-2.1.1.min.js')}}"></script>
