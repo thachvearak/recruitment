@@ -23,29 +23,6 @@
 			</select>
 		</div>
 		<div class="form-group col-md-4">
-			<label for="search-location">Locations</label>
-			<select id="search-location" name="search-location" class="form-control search-field">
-				<option>Phnom Penh</option>
-				<option>Siemreab</option>
-				<option>Sihanuk Ville</option>
-				<option>Kampong Chhnange</option>
-				<option>Preyveng</option>
-			</select>
-		</div>
-		<div class="form-group col-md-4">
-			<label for="search-salary">Expected salary</label>
-			<select id="search-salary" name="search-salary" class="form-control search-field">
-				<option>Minimum</option>
-				<option>$200</option>
-				<option>$500</option>
-				<option>$600</option>
-				<option>$1,000</option>
-				<option>$1,500</option>
-			</select>
-		</div>
-	</div>
-	<div class="row">		
-		<div class="form-group col-md-4">
 			<label for="search-industry">Industries</label>
 			<select id="search-industry" name="search-industry" class="form-control search-field">
 				<option>All industries</option>
@@ -62,7 +39,30 @@
 			</select>
 		</div>
 		<div class="form-group col-md-4">
-			<label for="search-worktime">Locations</label>
+			<label for="search-location">Locations</label>
+			<select id="search-location" name="search-location" class="form-control search-field">
+				<option>Phnom Penh</option>
+				<option>Siemreab</option>
+				<option>Sihanuk Ville</option>
+				<option>Kampong Chhnange</option>
+				<option>Preyveng</option>
+			</select>
+		</div>
+	</div>
+	<div class="row">	
+		<div class="form-group col-md-4">
+			<label for="search-salary">Expected salary</label>
+			<select id="search-salary" name="search-salary" class="form-control search-field">
+				<option>Minimum</option>
+				<option>$200</option>
+				<option>$500</option>
+				<option>$600</option>
+				<option>$1,000</option>
+				<option>$1,500</option>
+			</select>
+		</div>	
+		<div class="form-group col-md-4">
+			<label for="search-worktime">Working time</label>
 			<select id="search-worktime" name="search-worktime" class="form-control search-field">
 				<option>Any time</option>
 				<option>Part time</option>
@@ -70,7 +70,7 @@
 			</select>
 		</div>
 		<div class="form-group col-md-4">
-			<label for="search-position">Expected salary</label>
+			<label for="search-position">Position</label>
 			<select id="search-position" name="search-position" class="form-control search-field">
 				<option value="1">Non-Executive</option>
 				<option value="2">Fresh/Entry Level</option>
