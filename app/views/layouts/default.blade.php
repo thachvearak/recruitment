@@ -18,9 +18,10 @@
 	<script src="{{asset('assets/js/bootstrap/bootstrap.min.js')}}"></script>
 </head>
 <body>
-	
+	<form method="post" action="">
 		@include('layouts.header')
-		@yield('body')
-		@include('layouts.footer')	
+		@include('layouts.body')
+		@include('layouts.footer')
+	</form>
 </body>
 </html>

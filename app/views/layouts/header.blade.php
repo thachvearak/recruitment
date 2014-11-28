@@ -1,30 +1,34 @@
 <div class="container header">
-	<div class="row">		
+	<div class="row first-level-header">		
 		<div class="company-logo col-md-3">
 			<a href=""></a>
 		</div>
-		<div class="login .col-xs-12 .col-sm-6 col-md-9">
-			<form method="post" action="" class="form-inline">			
-				<div class="form-group">
+		<div class="col-md-9">			
+			<div class="row login-block">
+				<div class="col-md-9">
 					<div class="form-group">
-						<input type="text" id="email-login" class="form-control" name="email-login" placeholder="Email address" >
+						<div class="form-group">
+							<input type="text" id="email" class="form-control" name="email-login" placeholder="Email address" >
+						</div>
+						<div class="form-group">
+							<input type="password" id="password" class="form-control" name="password" placeholder="Password" >
+						</div>
 					</div>
 					<div class="form-group">
-						<input type="password" id="password" class="form-control" name="password" placeholder="Password" >
-					</div>				
-					<div class="checkbox" style="display: block; margin-top: 7px;">
-					    <label>
-					      <input type="checkbox"> Remember me
-					    </label>
-					</div>
-					<div class="form-group">
-						<a href="">Forgot your password</a>
+						<div class="checkbox chk-remember">
+						    <label>
+						      <input type="checkbox"> Remember me
+						    </label>
+					    </div>
+					    <div>
+							<a href="">Forgot your password</a>
+						</div>
 					</div>
 				</div>
-				<div class="form-group" style="vertical-align: top;">
+				<div class="col-md-3">
 					<Button type="submit" id="btn-login" class="btn btn-default" name="btn-login">Login</Button>
 				</div>
-			</form>	
+			</div> 			
 		</div>
 	</div>
 	<div class="row">

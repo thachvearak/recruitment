@@ -5,6 +5,9 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+.container{
+	max-width: 970px;
+}
 .menu ul li:hover ul{
 	display: block;
 }
@@ -17,4 +20,28 @@
 	width: 191px;
 	height: 100px;
 	background: url(/assets/images/company-logo.jpg) 0 0 no-repeat;
+}
+#search-block{
+	background-color: #95c141;
+	padding: 15px 30px ;
+	border-radius: 5px;	
+}
+.first-level-header{
+	padding: 18px 0;
+}
+.search-field{
+	border-radius: 30px;
+}
+.login-block #email,
+.login-block #password{
+	width: 48%;
+	float: left;
+}
+.login-block #password{
+	margin-left: 10px;
+}
+.login-block .form-group:after{
+	content: '';
+	display: block;
+	clear: both;
 }
