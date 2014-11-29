@@ -1,6 +1,6 @@
 <div class="container header">
 	<div class="row first-level-header">		
-		<div class="company-logo col-md-3">
+		<div class="col-md-3 company-logo">
 			<a href=""></a>
 		</div>
 		<div class="col-md-9">			

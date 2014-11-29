@@ -7,6 +7,10 @@
 }
 .container{
 	max-width: 970px;
+	padding: 0;
+}
+.company-logo{
+	padding: 0;
 }
 .menu ul li:hover ul{
 	display: block;
@@ -21,23 +25,13 @@
 	height: 100px;
 	background: url(/assets/images/company-logo.jpg) 0 0 no-repeat;
 }
-#search-block{
-	background-color: #95c141;
-	padding: 15px 30px ;
-	border-radius: 5px;	
-}
-.first-level-header{
-	padding: 18px 0;
-}
-.search-field{
-	border-radius: 30px;
-}
 
 /**** Login block ****/
 .login-block{
 	margin: 15px 0;
 }
-.login-block .row{
+.login-block .row,
+.container.header > .row{
 	margin: 0;
 }
 .login-block .col-md-6,
@@ -59,4 +53,25 @@
 	.login-block .form-group.input-margin{
 		margin-bottom: 15px;
 	}
+}
+
+/*** Search block ***/
+#search-block{
+	background-color: #95c141;
+	padding: 15px 30px ;
+	border-radius: 5px;
+	margin-top: 20px;	
+}
+#search-block input[type=text],
+#search-block input[type=email],
+#search-block input[type=password],
+#search-block input[type=search],
+#search-block select{
+	border: 3px solid #eee;
+}
+.first-level-header{
+	padding: 18px 0;
+}
+.search-field{
+	border-radius: 30px;
 }
