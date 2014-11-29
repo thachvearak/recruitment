@@ -32,16 +32,31 @@
 .search-field{
 	border-radius: 30px;
 }
-.login-block #email,
-.login-block #password{
-	width: 48%;
-	float: left;
+
+/**** Login block ****/
+.login-block{
+	margin: 15px 0;
 }
-.login-block #password{
-	margin-left: 10px;
+.login-block .row{
+	margin: 0;
 }
-.login-block .form-group:after{
-	content: '';
-	display: block;
-	clear: both;
+.login-block .col-md-6,
+.login-block .col-md-3{
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.login-block .col-md-9,
+.login-block .col-md-12{
+	padding: 0;
+}
+.login-block .chk-remember{
+	margin: 0;
+}
+.login-block .form-group.input-margin{
+	margin-bottom: 5px;
+}
+@media screen and (max-width: 991px){
+	.login-block .form-group.input-margin{
+		margin-bottom: 15px;
+	}
 }
