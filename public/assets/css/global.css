@@ -83,3 +83,31 @@
 	border-bottom: 1px solid #ddd;
 	border-right: 1px solid #ddd;
 }
+#browse-jobs .tab-content ul{
+	margin: 0;
+	padding-left: 10px;
+}
+#browse-jobs .tab-content ul:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+#browse-jobs .tab-content ul li{
+	list-style-type: none;
+	width: 229px;
+	display: block;
+	float: left;
+}
+#browse-jobs .tab-content ul li:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+#browse-jobs .tab-content ul li .text{	
+	max-width: 85%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	float: left;
+	margin-right: 5px;
+}
