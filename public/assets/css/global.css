@@ -77,6 +77,9 @@
 }
 
 /*** Browse jobs ***/
+#browse-jobs{
+	margin: 0 0 20px 0;
+}
 #browse-jobs .tab-content{
 	padding: 20px;
 	border-left: 1px solid #ddd;
@@ -94,7 +97,7 @@
 }
 #browse-jobs .tab-content ul li{
 	list-style-type: none;
-	width: 229px;
+	width: 33%;
 	display: block;
 	float: left;
 }
@@ -104,10 +107,46 @@
 	clear: both;
 }
 #browse-jobs .tab-content ul li .text{	
-	max-width: 85%;
+	max-width: 80%;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	float: left;
-	margin-right: 5px;
+	margin-right: 11px;
+}
+
+/*** Premium Jobs ***/
+#premium-job .list-group,
+#urgent-job .list-group{
+	margin: 0;
+}
+#premium-job .list-group-item,
+#urgent-job .list-group-item{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: none;
+}
+
+/*** Feature companies ***/
+#feature-company,
+#feature-agency{
+	margin: 0 0 0 0;
+}
+#feature-company ul,
+#feature-agency ul{
+	margin: 0;
+	padding: 0;
+}
+#feature-company ul:after,
+#feature-agency ul:after{
+	content: '';
+	display: table;
+	clear: both;
+}
+#feature-company ul li,
+#feature-agency ul li{
+	list-style-type: none;
+	display: block;
+	float: left;
+	margin: 12px;
 }
