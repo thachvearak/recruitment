@@ -21,7 +21,10 @@
 	<form method="post" action="">
 		@include('layouts.header')
 		@include('layouts.body')
-		@include('layouts.footer')
+		<div class="footer-container-back">
+			<hr>
+			@include('layouts.footer')
+	</div>
 	</form>
 </body>
 </html>

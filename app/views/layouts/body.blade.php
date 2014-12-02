@@ -493,14 +493,14 @@
 							</div>
 							<div class="panel-body">
 							    <ul>							 	
-									<li><a href=""><img alt="" src="https://camupjob.com/public_images/pic-logo/1.png"></a></li>
-									<li><a href=""><img alt="" src="https://camupjob.com/public_images/pic-logo/2.png"></a></li>
-									<li><a href=""><img alt="" src="https://camupjob.com/public_images/pic-logo/3.png"></a></li>
-									<li><a href=""><img alt="" src="https://camupjob.com/public_images/pic-logo/4.png"></a></li>
-									<li><a href=""><img alt="" src="https://camupjob.com/public_images/pic-logo/5.png"></a></li>
-									<li><a href=""><img alt="" src="https://camupjob.com/public_images/pic-logo/6.png"></a></li>
-									<li><a href=""><img alt="" src="https://camupjob.com/public_images/pic-logo/7.png"></a></li>
-									<li><a href=""><img alt="" src="https://camupjob.com/public_images/pic-logo/8.png"></a></li>
+									<li><a href=""><img alt="" src="http://pagead2.googlesyndication.com/simgad/16323961550164591124"></a></li>
+									<li><a href=""><img alt="" src="http://pagead2.googlesyndication.com/simgad/7947863923322721030"></a></li>
+									<li><a href=""><img alt="" src="http://pagead2.googlesyndication.com/simgad/5480888326614701151"></a></li>
+									<li><a href=""><img alt="" src="http://pagead2.googlesyndication.com/simgad/5632872231870354785"></a></li>
+									<li><a href=""><img alt="" src="http://pagead2.googlesyndication.com/simgad/6414520881760617853"></a></li>
+									<li><a href=""><img alt="" src="http://pagead2.googlesyndication.com/simgad/7208073306647187649"></a></li>
+									<li><a href=""><img alt="" src="http://pagead2.googlesyndication.com/simgad/6842639147088511536"></a></li>
+									<li><a href=""><img alt="" src="http://pagead2.googlesyndication.com/simgad/108305372875684781"></a></li>
 								</ul>
 							</div>
 						</div>
