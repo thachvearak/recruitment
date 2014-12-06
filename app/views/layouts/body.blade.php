@@ -59,7 +59,7 @@
 							<div class="job-post">
 								<ul class="list-unstyled">
 									<li><a href="" class="job-title"><h3>Quotation and Project Study</h3></a><span
-										class="job-status">(Urgent)</span>
+										class="glyphicon glyphicon-star job-status"></span>
 										<div class="employer">
 											<small>Inter Smart Cambodia Co.,Ltd</small>
 										</div>
