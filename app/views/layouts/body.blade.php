@@ -58,13 +58,15 @@
 						<div class="job-posts">
 							<div class="job-post">
 								<ul class="list-unstyled">
-									<li><a href="" class="job-title">Quotation and Project Study</a><span
+									<li><a href="" class="job-title"><h3>Quotation and Project Study</h3></a><span
 										class="job-status">(Urgent)</span>
 										<div class="employer">
 											<small>Inter Smart Cambodia Co.,Ltd</small>
 										</div>
-										<div class="closing-date">
-											<small>Closing date: <span>12/September/2014</span></small>
+										<div>
+											<small>Closing date: <span class="closing-date">12/September/2014</span></small><span class="separator">|</span>
+											<small>Location: <span class="location">Phnom Penh</span></small><span class="separator">|</span>
+											<small>Salary: <span class="salary">Negotiable</span></small>
 										</div>
 										</li>
 								</ul>
@@ -72,30 +74,123 @@
 							</div>
 							<div class="job-post">
 								<ul class="list-unstyled">
-									<li><a href="" class="job-title">Courier
-											(បុគ្គលិកផ្នែកបញ្ជូនសំបុត្រ និងទំនិញ)</a><span
-										class="job-status">(Urgent)</span>										
+									<li><a href="" class="job-title"><h3>Courier
+											(បុគ្គលិកផ្នែកបញ្ជូនសំបុត្រ និងទំនិញ)</h3></a>										
 										<div class="employer">
 											<small>Inter Smart Cambodia Co.,Ltd</small>
 										</div>
-										<div class="closing-date">
-											<small>Closing date: <span>12/September/2014</span></small>
+										<div>
+											<small>Closing date: <span class="closing-date">12/September/2014</span></small><span class="separator">|</span>
+											<small>Location: <span class="location">Phnom Penh</span></small><span class="separator">|</span>
+											<small>Salary: <span class="salary">Negotiable</span></small>
 										</div></li>
 								</ul>
 								<hr>
 							</div>
 							<div class="job-post">
 								<ul class="list-unstyled">
-									<li><a href="" class="job-title">Marketing (Many Positions)</a><span
+									<li><a href="" class="job-title"><h3>Marketing (Many Positions)</h3></a>
+										<div class="employer">
+											<small>Inter Smart Cambodia Co.,Ltd</small>
+										</div>
+										<div>
+											<small>Closing date: <span class="closing-date">12/September/2014</span></small><span class="separator">|</span>
+											<small>Location: <span class="location">Phnom Penh</span></small><span class="separator">|</span>
+											<small>Salary: <span class="salary">Negotiable</span></small>
+										</div></li>
+								</ul>
+								<hr>
+							</div>
+						<div class="job-post">
+								<ul class="list-unstyled">
+									<li><a href="" class="job-title"><h3>Quotation and Project Study</h3></a><span
 										class="job-status">(Urgent)</span>
 										<div class="employer">
 											<small>Inter Smart Cambodia Co.,Ltd</small>
 										</div>
-										<div class="closing-date">
-											<small>Closing date: <span>12/September/2014</span></small>
+										<div>
+											<small>Closing date: <span class="closing-date">12/September/2014</span></small><span class="separator">|</span>
+											<small>Location: <span class="location">Phnom Penh</span></small><span class="separator">|</span>
+											<small>Salary: <span class="salary">Negotiable</span></small>
+										</div>
+										</li>
+								</ul>
+								<hr>
+							</div>
+							<div class="job-post">
+								<ul class="list-unstyled">
+									<li><a href="" class="job-title"><h3>Courier
+											(បុគ្គលិកផ្នែកបញ្ជូនសំបុត្រ និងទំនិញ)</h3></a>										
+										<div class="employer">
+											<small>Inter Smart Cambodia Co.,Ltd</small>
+										</div>
+										<div>
+											<small>Closing date: <span class="closing-date">12/September/2014</span></small><span class="separator">|</span>
+											<small>Location: <span class="location">Phnom Penh</span></small><span class="separator">|</span>
+											<small>Salary: <span class="salary">Negotiable</span></small>
+										</div></li>
+								</ul>
+								<hr>
+							</div>
+							<div class="job-post">
+								<ul class="list-unstyled">
+									<li><a href="" class="job-title"><h3>Marketing (Many Positions)</h3></a>
+										<div class="employer">
+											<small>Inter Smart Cambodia Co.,Ltd</small>
+										</div>
+										<div>
+											<small>Closing date: <span class="closing-date">12/September/2014</span></small><span class="separator">|</span>
+											<small>Location: <span class="location">Phnom Penh</span></small><span class="separator">|</span>
+											<small>Salary: <span class="salary">Negotiable</span></small>
+										</div></li>
+								</ul>
+								<hr>
+							</div>
+						<div class="job-post">
+								<ul class="list-unstyled">
+									<li><a href="" class="job-title"><h3>Quotation and Project Study</h3></a><span
+										class="job-status">(Urgent)</span>
+										<div class="employer">
+											<small>Inter Smart Cambodia Co.,Ltd</small>
+										</div>
+										<div>
+											<small>Closing date: <span class="closing-date">12/September/2014</span></small><span class="separator">|</span>
+											<small>Location: <span class="location">Phnom Penh</span></small><span class="separator">|</span>
+											<small>Salary: <span class="salary">Negotiable</span></small>
+										</div>
+										</li>
+								</ul>
+								<hr>
+							</div>
+							<div class="job-post">
+								<ul class="list-unstyled">
+									<li><a href="" class="job-title"><h3>Courier
+											(បុគ្គលិកផ្នែកបញ្ជូនសំបុត្រ និងទំនិញ)</h3></a>										
+										<div class="employer">
+											<small>Inter Smart Cambodia Co.,Ltd</small>
+										</div>
+										<div>
+											<small>Closing date: <span class="closing-date">12/September/2014</span></small><span class="separator">|</span>
+											<small>Location: <span class="location">Phnom Penh</span></small><span class="separator">|</span>
+											<small>Salary: <span class="salary">Negotiable</span></small>
+										</div></li>
+								</ul>
+								<hr>
+							</div>
+							<div class="job-post">
+								<ul class="list-unstyled">
+									<li><a href="" class="job-title"><h3>Marketing (Many Positions)</h3></a>
+										<div class="employer">
+											<small>Inter Smart Cambodia Co.,Ltd</small>
+										</div>
+										<div>
+											<small>Closing date: <span class="closing-date">12/September/2014</span></small><span class="separator">|</span>
+											<small>Location: <span class="location">Phnom Penh</span></small><span class="separator">|</span>
+											<small>Salary: <span class="salary">Negotiable</span></small>
 										</div></li>
 								</ul>
 							</div>
+						
 						</div>
 					</div>
 				</div>
