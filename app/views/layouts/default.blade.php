@@ -8,16 +8,16 @@
 <!--  <link rel="stylesheet" href="{{asset('assets/css/jquery.mobile.min.css')}}"> -->
 <!--  <link rel="stylesheet" href="{{asset('assets/css/jquery-ui.css')}}"> -->
 <link rel="stylesheet"
-	href="{{asset('assets/css/bootstrap/bootstrap.min.css')}}">
+	href="{{asset('bootstrap-3.3.1/css/bootstrap.min.css')}}">
 <link rel="stylesheet"
-	href="{{asset('assets/css/bootstrap/bootstrap-theme.min.css')}}">
+	href="{{asset('bootstrap-3.3.1/css/bootstrap-theme.min.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/global.css')}}">
 
 <!-- JS -->
 <script src="{{asset('assets/js/jquery-2.1.1.min.js')}}"></script>
 <!--  <script src="{{asset('assets/js/jquery-ui.min.js')}}"></script> -->
 <!--  <script src="{{asset('assets/js/jquery.mobile.min.js')}}"></script> -->
-<script src="{{asset('assets/js/bootstrap/bootstrap.min.js')}}"></script>
+<script src="{{asset('bootstrap-3.3.1/js/bootstrap.min.js')}}"></script>
 </head>
 <body>
 	<div class="top-fixed-bar">		
