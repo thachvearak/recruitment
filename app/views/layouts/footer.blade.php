@@ -8,6 +8,15 @@
 				<span class="email">Email us <b>first.last@example.com</b></span><br>
 			</address>
 		</div>
+		<div class="col-md-6">
+			<div id="follow">
+					<ul>
+						<li><a target="_blank" class="fb"></a></li>
+						<li><a target="_blank" class="tw"></a></li>
+						<li><a target="_blank" class="gplus"></a></li>
+					</ul>
+				</div>
+		</div>
 	</div>
 	<div>
 		<center>
