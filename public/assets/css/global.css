@@ -191,6 +191,17 @@
 	border: none;
 }
 
+#premium-job a,
+#urgent-job a{
+	color: #D8A734;
+	font-weight: 600;
+}
+
+#premium-job a:hover,
+#urgent-job a:hover{
+	color: #f0c86a;
+}
+
 /*** Feature companies ***/
 #feature-company,#feature-agency {
 	margin: 0 0 0 0;

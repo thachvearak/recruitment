@@ -13,7 +13,6 @@
 			<ul class="list-unstyled">
 				<li><strong>Job seekers</strong>
 					<ul class="list-unstyled">
-						<li><a href="">Register</a></li>
 						<li><a href="">Create a Resume</a></li>
 						<li><a href="">Search & Apply for a Job</a></li>
 						<li><a href="">Job Alerts</a></li>
@@ -24,15 +23,14 @@
 			<ul class="list-unstyled">
 				<li><strong>Employers</strong>
 					<ul class="list-unstyled">
-						<li><a href="">About Us</a></li>
-						<li><a href="">Our Services</a></li>
-						<li><a href="">Search & Apply for a Job</a></li>
+						<li><a href="">View CV</a></li>
+						<li><a href="">Post job</a></li>
+						<li><a href="">Manage job</a></li>
 						<li><a href="">Payment Methods</a></li>
-						<li><a href="">Contact Us</a></li>
 					</ul></li>
 			</ul>
 			<ul class="list-unstyled">
-				<li><strong>Information</strong>
+				<li><strong>Career Guide</strong>
 					<ul class="list-unstyled">
 						<li><a href="">Post a Job</a></li>
 						<li><a href="">CV Search</a></li>
