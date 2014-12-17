@@ -145,6 +145,7 @@
 	border-left: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	border-right: 1px solid #ddd;
+	background-color: #fff;
 }
 
 #browse-jobs .tab-content ul {
@@ -180,6 +181,10 @@
 	margin-right: 11px;
 }
 
+#browse-jobs  a{
+	color: #5C5C5C;
+}
+
 /*** Premium Jobs ***/
 #premium-job .list-group,#urgent-job .list-group {
 	margin: 0;
@@ -191,14 +196,12 @@
 	border: none;
 }
 
-#premium-job a,
-#urgent-job a{
+#premium-job a,#urgent-job a {
 	color: #D8A734;
 	font-weight: 600;
 }
 
-#premium-job a:hover,
-#urgent-job a:hover{
+#premium-job a:hover,#urgent-job a:hover {
 	color: #f0c86a;
 }
 
@@ -277,7 +280,15 @@
 	background-color: #fff;
 	border: 1px solid #E5E5E5;
 	box-shadow: 0 0 2px rgba(0, 0, 0, .05);
+	border-radius: 5px;
+}
+
+.job-post {
 	padding: 20px;
+}
+
+.job-post:hover {
+	background-color: rgba(13, 194, 38, 0.04);
 }
 
 .job-post a.job-title {
@@ -306,11 +317,19 @@
 }
 
 .job-post .closing-date {
-	color: red;
 }
 
 .job-post .salary {
-	color: blue;
+}
+
+.post-seperator {
+	margin: 0;
+}
+
+.list-group-unstyle {
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 
 .view-name {
@@ -324,19 +343,19 @@ hr#line-break-footer {
 	border-bottom: 1px solid #fff;
 }
 
-#follow ul{
+#follow ul {
 	display: inline;
 	padding: 0;
 }
 
-#follow li{
+#follow li {
 	list-style: none;
 	display: inline-block;
 }
 
-#follow a{
+#follow a {
 	font-family: FontAwesome;
-	font-size: 2.3em;	
+	font-size: 2.3em;
 	text-decoration: none;
 	text-align: center;
 	padding: 10px;
@@ -346,12 +365,15 @@ hr#line-break-footer {
 	-o-transition: 0.6s;
 	-ms-transition: 0.6s;
 }
+
 .fb:before {
 	content: "\f09a";
 }
+
 .tw:before {
 	content: "\f099";
 }
+
 .gplus:before {
 	content: "\f0d5";
 }
