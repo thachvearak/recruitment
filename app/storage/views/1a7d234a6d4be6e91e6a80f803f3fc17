@@ -1,0 +1,48 @@
+ 
+
+<?php $__env->startSection('candidate'); ?>
+<div class="col-md-2 left-side-bar">
+	<div>
+		<?php echo $__env->make('menu.menu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	</div>
+</div>
+<div id="cvs" class="col-md-7 middle-wrapper">
+	<div>
+		<div class="view-name title-bar">
+			<strong>CV</strong>
+		</div>
+		<div class="box-body">
+			<table class="table table-condensed table-bordered">
+			  <thead>
+			  	<tr>
+			  		<th>Title</th>
+			  		<th>Searchable</th>
+			  		<th>Viewed</th>
+			  		<th>Completeness</th>
+			  		<th>Update</th>
+			  		<th>Action</th>
+			  	</tr>
+			  </thead>
+			  <tbody>
+			  <?php foreach($cvs as $cv): ?>
+			  	<tr>
+			  		<td><?php echo $cv->title; ?></td>
+			  		<td><i class="glyphicon <?php echo $cv->searchable == 1 ? 'glyphicon-ok' : 'glyphicon-remove'; ?>"></i></td>
+			  		<td></td>
+			  		<td></td>
+			  		<td><?php echo $cv->updated_at; ?></td>
+			  		<td>
+			  			<a href="<?php echo URL::route('candidate.cv.create.edit', array($cv->id)); ?>">Edit</a><br>
+			  			<a href="">Delete</a><br>
+			  			<a href="">Preview</a>
+			  		</td>
+			  	</tr>
+			  <?php endforeach; ?>
+			  </tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="col-md-3 right-side-bar"></div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

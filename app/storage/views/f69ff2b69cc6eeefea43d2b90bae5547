@@ -1,0 +1,390 @@
+ 
+
+<?php $__env->startSection('candidate'); ?>
+<div class="col-md-2 left-side-bar">
+	<div>
+		<?php echo $__env->make('menu.menu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	</div>
+</div>
+<div id="profile" class="col-md-7 middle-wrapper">
+	<div class="outter-box">
+		<div id="show-profile" class="<?php echo isset($candidate->is_new_candidate) ? 'hide' : ''; ?>">
+			<?php if(Session::get('profile')): ?>
+				<div id="alert" class="alert alert-success" style="text-align: center;">
+					<?php echo Session::get('profile'); ?>
+
+				</div>		
+				<script type="text/javascript">
+					setTimeout(function(){
+						$('#alert').css({
+							'opacity': 0, 
+							'transition': 'all 1s ease-in'
+						});
+					}, 3000);
+					setTimeout(function(){
+						$('#alert').remove();
+					}, 4000);
+				</script>
+			<?php endif; ?>
+			<div class="box">
+				<div class="row">
+					<div class="view-name title-bar">
+						<strong>Account</strong>
+					</div>
+				</div>
+				<div class="row box-body">
+					<div class="form-horizontal">
+						<div class="form-group">
+						    <label for="" class="col-sm-4 control-label">User name</label>
+						    <div class="col-sm-7">
+						      <span class="data"><strong><?php echo Auth::user()->user_name; ?></strong></span>						
+							</div>
+						</div>
+						<div class="form-group">
+						    <label for="" class="col-sm-4 control-label">Email</label>
+						    <div class="col-sm-7">
+						      <span class="data"><strong><?php echo Auth::user()->email; ?></strong></span>						
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box">
+				<div class="row">
+					<div class="view-name title-bar">
+						<strong>My Profile</strong>
+					</div>
+				</div>
+				<div class="row box-body">
+				<form method="post" action="<?php echo URL::route('candidate.cv.profile.post'); ?>" class="form-horizontal">
+					<div class="form-group">
+					    <label for="surname" class="col-sm-4 control-label">Surname</label>
+					    <div class="col-sm-7">
+					      <span class="data"><strong><?php echo $candidate->surname; ?></strong></span>			      							
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="name" class="col-sm-4 control-label">Given name</label>
+					    <div class="col-sm-7">
+					      <span class="data"><strong><?php echo $candidate->name; ?></strong></span>					
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="surname" class="col-sm-4 control-label">Sex</label>
+					    <div class="col-sm-7">
+					      <span class="data"><strong><?php echo Lang::get("local.gender.{$candidate->sex}"); ?></strong></span>							
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="date_of_birth" class="col-sm-4 control-label">Date Of Birth</label>
+					    <div class="col-sm-7">
+					       <span class="data"><strong><?php echo !empty($candidate->date_of_birth) ? \Carbon\Carbon::createFromFormat('Y-m-d', $candidate->date_of_birth)->format('Y-F-d') : ''; ?></strong></span>					
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="marital_status" class="col-sm-4 control-label">Marital Status</label>
+					    <div class="col-sm-7">
+						     <span class="data"><strong><?php echo Lang::get("local.marital.{$candidate->marital_id}"); ?></strong></span>							
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="nationality" class="col-sm-4 control-label">Nationality</label>
+					    <div class="col-sm-7">
+					        <span class="data"><strong><?php echo $candidate->nationality; ?></strong></span>						
+						</div>
+					</div>		
+					<div class="form-group">
+					    <label for="residence" class="col-sm-4 control-label">Province / City</label>
+					    <div class="col-sm-7">
+					        <span class="data"><strong><?php echo $candidate->residence; ?></strong></span>							
+						</div>
+					</div>	
+					<div class="form-group">
+					    <label for="address" class="col-sm-4 control-label">Address</label>
+					    <div class="col-sm-7">
+					    	<span class="data"><strong><?php echo $candidate->address; ?></strong></span>							
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="phone_number" class="col-sm-4 control-label">Phone</label>
+					    <div class="col-sm-7">
+					    	<span class="data"><strong><?php echo $candidate->phone_number; ?></strong></span>
+					    </div>
+					</div>
+					<!-- <div class="form-group profile-pic" style="position: absolute; width: 116px; top: 18px; left: 500px;">
+						<img src="<?php echo asset('assets/images/no-profile-pic.jpg'); ?>" alt="..." class="img-thumbnail">
+						<div class="hide" style="position: absolute; top: 0; left: 100%;">
+							<a href="" style="display: block; padding: 5px; text-align: center;"><i class="glyphicon glyphicon-pencil"></i></a>
+							<hr style="margin: 0; opacity: .2;">
+							<a href="" style="display: block; padding: 5px; text-align: center;"><i class="glyphicon glyphicon-trash"></i></a>
+						</div>				
+					</div>		 -->		
+					<div class="box-footer">
+						<button type="button" id="btn-profile-edit" class="btn btn-default" style="width: 100px;">Edit</button>
+					</div>
+					<?php echo Form::token(); ?>
+
+				</form>
+				</div>
+			</div>
+		</div>
+		<div id="edit-profile" class="<?php echo !isset($candidate->is_new_candidate) ? 'hide' : ''; ?>">		
+		<div class="box">
+			<div class="row">
+				<div class="view-name title-bar">
+					<strong>Account</strong>
+				</div>
+			</div>
+			<div class="row box-body">
+				<div class="form-horizontal">
+					<div class="form-group">
+					    <label for="" class="col-sm-4 control-label">User name</label>
+					    <div class="col-sm-5">
+					      <span class="data"><strong><?php echo Auth::user()->user_name; ?></strong></span>						
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="" class="col-sm-4 control-label">Email</label>
+					    <div class="col-sm-5">
+					      <span class="data"><strong><?php echo Auth::user()->email; ?></strong></span>						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="box">
+			<div class="row">
+				<div class="view-name title-bar">
+					<strong>My Profile</strong>
+				</div>
+			</div>
+			<div class="row box-body">
+			<form method="post" action="<?php echo URL::route('candidate.cv.profile.post'); ?>" class="form-horizontal">
+				<?php if($errors->has()): ?>
+					<div class="form-group">
+					    <label for="surname" class="col-sm-4 control-label">Surname</label>
+					    <div class="col-sm-5">
+					      <input type="text" class="form-control" id="surname" name="surname" value="<?php echo Input::old('surname'); ?>">			      							
+						</div>
+						<div class="col-sm-3" style="padding:0;">
+							<div class="error">								
+								<?php echo $errors->first('surname', ':message'); ?>
+
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="name" class="col-sm-4 control-label">Given name</label>
+					    <div class="col-sm-5">
+					      <input type="text" class="form-control" id="name" name="name" value="<?php echo Input::old('name'); ?>">						
+						</div>
+						<div class="col-sm-3" style="padding:0;">
+								<div class="error">								
+									<?php echo $errors->first('name', ':message'); ?>
+
+								</div>
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="surname" class="col-sm-4 control-label">Sex</label>
+					    <div class="col-sm-5">
+					      <div class="radio">
+					      		<?php foreach(\Constants::getGenders() as $gender): ?>
+						  			<label><input type="radio" id="sex" name="sex" value="<?php echo $gender->id; ?>" <?php echo Input::old('sex') == $gender->id ? 'checked' : ''; ?>><?php echo $gender->id; ?></label>&nbsp&nbsp
+								<?php endforeach; ?>
+						  </div>							
+						</div>
+						<div class="col-sm-3" style="padding:0;">
+								<div class="error">								
+									<?php echo $errors->first('sex', ':message'); ?>
+
+								</div>
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="date_of_birth" class="col-sm-4 control-label">Date Of Birth</label>
+					    <div class="col-sm-5">
+					      <input type="date" class="form-control input-sm" id="date_of_birth" name="date_of_birth" value="<?php echo Input::old('date_of_birth'); ?>">
+					    						
+						</div>
+						<div class="col-sm-3" style="padding:0;">
+								<div class="error">								
+									<?php echo $errors->first('date_of_birth', ':message'); ?>
+
+								</div>
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="marital_status" class="col-sm-4 control-label">Marital Status</label>
+					    <div class="col-sm-5">
+					      <select class="form-control input-sm" id="marital_status" name="marital_status">
+								<option value="">---Select---</option>
+								<?php foreach(\Constants::getMaritalStatuses() as $status): ?>
+									<option value="<?php echo $status->id; ?>" <?php echo Input::old('marital_status') == $status->id ? 'selected' : ''; ?>><?php echo Lang::get("local.marital.{$status->id}"); ?></option>
+								<?php endforeach; ?>
+							</select>							
+						</div>
+						<div class="col-sm-3" style="padding:0;">
+								<div class="error">								
+									<?php echo $errors->first('marital_status', ':message'); ?>
+
+								</div>
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="nationality" class="col-sm-4 control-label">Nationality</label>
+					    <div class="col-sm-5">
+					      <select class="form-control input-sm" id="nationality" name="nationality">
+								<option value="">---Select---</option>
+								<?php foreach(Country::getNationalities() as $nationality): ?>
+									<option value="<?php echo $nationality->id; ?>" <?php echo Input::old('nationality') == $nationality->id ? 'selected' : ''; ?>><?php echo $nationality->nationality; ?></option>
+								<?php endforeach; ?>
+							</select>						
+						</div>
+						<div class="col-sm-3" style="padding:0;">
+								<div class="error">								
+									<?php echo $errors->first('nationality', ':message'); ?>
+
+								</div>
+						</div>
+					</div>		
+					<div class="form-group">
+					    <label for="residence" class="col-sm-4 control-label">Province / City</label>
+					    <div class="col-sm-5">
+					      <select class="form-control input-sm" id="residence" name="residence">
+								<option value="">---Select---</option>
+								<?php foreach(Location::getProvinces_Cities() as $location): ?>
+								<option value="<?php echo $location->id; ?>" <?php echo Input::old('residence') == $location->id ? 'selected' : ''; ?>><?php echo $location->name; ?></option>
+								<?php endforeach; ?>
+							</select>							
+						</div>
+						<div class="col-sm-3" style="padding:0;">
+								<div class="error">								
+									<?php echo $errors->first('residence', ':message'); ?>
+
+								</div>
+						</div>
+					</div>	
+					<div class="form-group">
+					    <label for="address" class="col-sm-4 control-label">Address</label>
+					    <div class="col-sm-5">
+					     <textarea class="form-control input-sm" id="address" name="address"><?php echo Input::old('address'); ?></textarea>							
+						</div>
+						<div class="col-sm-3" style="padding:0;">
+								<div class="error">								
+									<?php echo $errors->first('address', ':message'); ?>
+
+								</div>
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="phone_number" class="col-sm-4 control-label">Phone</label>
+					    <div class="col-sm-5">
+					     <input type="text" class="form-control input-sm" id="phone_number" name="phone_number" value="<?php echo Input::old('phone_number'); ?>">
+					    </div>
+						<div class="col-sm-3" style="padding:0;">
+								<div class="error">								
+									<?php echo $errors->first('phone_number', ':message'); ?>
+
+								</div>
+						</div>
+					</div>
+				<?php else: ?>
+					<div class="form-group">
+					    <label for="surname" class="col-sm-4 control-label">Surname</label>
+					    <div class="col-sm-5">
+					      <input type="text" class="form-control" id="surname" name="surname" value="<?php echo $candidate->surname; ?>">			      							
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="name" class="col-sm-4 control-label">Given name</label>
+					    <div class="col-sm-5">
+					      <input type="text" class="form-control" id="name" name="name" value="<?php echo $candidate->name; ?>">						
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="surname" class="col-sm-4 control-label">Sex</label>
+					    <div class="col-sm-5">
+					      <div class="radio">
+					      		<?php foreach(\Constants::getGenders() as $gender): ?>
+						  			<label><input type="radio" id="sex" name="sex" value="<?php echo $gender->id; ?>" <?php echo $candidate->sex == $gender->id ? 'checked' : ''; ?>><?php echo $gender->id; ?></label>&nbsp&nbsp
+								<?php endforeach; ?>
+						  </div>							
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="date_of_birth" class="col-sm-4 control-label">Date Of Birth</label>
+					    <div class="col-sm-5">
+					      <input type="date" class="form-control input-sm" id="date_of_birth" name="date_of_birth" value="<?php echo $candidate->date_of_birth; ?>">					    						
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="marital_status" class="col-sm-4 control-label">Marital Status</label>
+					    <div class="col-sm-5">
+					      <select class="form-control input-sm" id="marital_status" name="marital_status">
+								<option value="">---Select---</option>
+					      		<?php foreach(\Constants::getMaritalStatuses() as $status): ?>
+									<option value="<?php echo $status->id; ?>" <?php echo $candidate->marital_id == $status->id ? 'selected' : ''; ?>><?php echo Lang::get("local.marital.{$status->id}"); ?></option>
+								<?php endforeach; ?>
+							</select>							
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="nationality" class="col-sm-4 control-label">Nationality</label>
+					    <div class="col-sm-5">
+					      <select class="form-control input-sm" id="nationality" name="nationality">
+								<option value="">---Select---</option>
+								<?php foreach(Country::getNationalities() as $nationality): ?>
+								<option value="<?php echo $nationality->id; ?>" <?php echo $candidate->nationality_id == $nationality->id ? 'selected' : ''; ?>><?php echo $nationality->nationality; ?></option>
+								<?php endforeach; ?>
+							</select>						
+						</div>
+					</div>		
+					<div class="form-group">
+					    <label for="residence" class="col-sm-4 control-label">Province / City</label>
+					    <div class="col-sm-5">
+					      <select class="form-control input-sm" id="residence" name="residence">
+								<option value="">---Select---</option>
+								<?php foreach(Location::getProvinces_Cities() as $location): ?>
+								<option value="<?php echo $location->id; ?>" <?php echo $candidate->residence_id == $location->id ? 'selected' : ''; ?>><?php echo $location->name; ?></option>
+								<?php endforeach; ?>
+							</select>							
+						</div>
+					</div>	
+					<div class="form-group">
+					    <label for="address" class="col-sm-4 control-label">Address</label>
+					    <div class="col-sm-5">
+					     <textarea class="form-control input-sm" id="address" name="address"><?php echo $candidate->address; ?></textarea>							
+						</div>
+					</div>
+					<div class="form-group">
+					    <label for="phone_number" class="col-sm-4 control-label">Phone</label>
+					    <div class="col-sm-5">
+					     <input type="text" class="form-control input-sm" id="phone_number" name="phone_number" value="<?php echo $candidate->phone_number; ?>">
+					    </div>
+					</div>			
+				<?php endif; ?>
+				<!-- <div class="form-group profile-pic" style="position: absolute; width: 116px; top: 18px; left: 500px;">
+					<img src="<?php echo asset('assets/images/no-profile-pic.jpg'); ?>" alt="..." class="img-thumbnail">
+					<div class="hide" style="position: absolute; top: 0; left: 100%;">
+						<a href="" style="display: block; padding: 5px; text-align: center;"><i class="glyphicon glyphicon-pencil"></i></a>
+						<hr style="margin: 0; opacity: .2;">
+						<a href="" style="display: block; padding: 5px; text-align: center;"><i class="glyphicon glyphicon-trash"></i></a>
+					</div>				
+				</div>		 -->		
+				<div class="box-footer">
+					<button type="submit" class="btn btn-default" style="width: 100px;"><i class="fa fa-floppy-o"></i> Save</button>
+				</div>
+				<?php echo Form::token(); ?>
+
+			</form>
+			</div>
+		</div>
+	</div>
+	</div>
+</div>
+<div class="col-md-3 right-side-bar">
+	
+</div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

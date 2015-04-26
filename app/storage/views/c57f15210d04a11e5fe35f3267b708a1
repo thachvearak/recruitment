@@ -1,0 +1,11 @@
+ 
+
+<?php $__env->startSection('employer'); ?>
+<div class="left-side-bar pull-left">
+	<div><?php echo $__env->make('menu.menu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?></div>
+</div>
+<div class="middle-wrapper pull-left">
+</div>
+<div class="right-side-bar pull-left"></div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

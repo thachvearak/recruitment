@@ -1,0 +1,8 @@
+<div class="container body">	
+	<div class="clearfix">
+		<?php echo $__env->yieldContent('login'); ?>
+		<?php echo $__env->yieldContent('main'); ?>
+		<?php echo $__env->yieldContent('candidate'); ?>
+		<?php echo $__env->yieldContent('employer'); ?>
+	</div>
+</div>

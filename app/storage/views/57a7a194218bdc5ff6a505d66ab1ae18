@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title></title>
+
+<!-- CSS -->
+<!--  <link rel="stylesheet" href="<?php echo asset('assets/css/jquery.mobile.min.css'); ?>"> -->
+<!--  <link rel="stylesheet" href="<?php echo asset('assets/css/jquery-ui.css'); ?>"> -->
+<link rel="stylesheet"
+	href="<?php echo asset('bootstrap-3.3.1/css/bootstrap.min.css'); ?>">
+<link rel="stylesheet"
+	href="<?php echo asset('bootstrap-3.3.1/css/bootstrap-theme.min.css'); ?>">
+	<link rel="stylesheet"
+	href="<?php echo asset('font-awesome-4.2.0/css/font-awesome.min.css'); ?>">
+<link rel="stylesheet" href="<?php echo asset('assets/css/global.css'); ?>">
+<link rel="stylesheet" href="<?php echo asset('assets/css/base.css'); ?>">
+<link rel="stylesheet" href="<?php echo asset('assets/css/layout.css'); ?>">
+<link rel="stylesheet" href="<?php echo asset('assets/css/module.css'); ?>">
+<link rel="stylesheet" href="<?php echo asset('assets/css/state.css'); ?>">
+<link rel="stylesheet" href="<?php echo asset('assets/css/theme.css'); ?>">
+
+<!-- JS -->
+<script src="<?php echo asset('assets/js/lib/jquery-2.1.1.min.js'); ?>"></script>
+ <script src="<?php echo asset('assets/js/lib/jquery-ui.min.js'); ?>"></script>
+<!--  <script src="<?php echo asset('assets/js/lib/jquery.mobile.min.js'); ?>"></script> -->
+ <script src="<?php echo asset('assets/js/lib/angular-1_3_x.min.js'); ?>"></script>
+ <script src="<?php echo asset('assets/js/lib/angular-sanitize.js'); ?>"></script>
+<script src="<?php echo asset('bootstrap-3.3.1/js/bootstrap.min.js'); ?>"></script>
+
+<body>
+	<div class="top-fixed-bar">		
+		<?php echo $__env->make('layouts.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> 
+	</div>
+	<div class="top-fixed-bar-back"></div>
+	<?php echo $__env->make('layouts.body', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	<div class="footer-container-back">
+		<?php echo $__env->make('layouts.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+	</div>
+		
+	<?php echo $__env->yieldContent('script'); ?>
+</head>
+</body>
+</html>

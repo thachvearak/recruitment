@@ -1,0 +1,119 @@
+#cv-edit #back-card #summary,
+#cv-edit #back-card #experience .item,
+#cv-edit #back-card #edu .item,
+#cv-edit #back-card #skills,
+#cv-edit #back-card #languages,
+#cv-edit #expectation-card #function,
+#cv-edit #expectation-card #industry,
+#cv-edit #expectation-card #location,
+#cv-edit #expectation-card #salary,
+#cv-edit #expectation-card #job_term,
+#cv-edit #ref-card .items{
+	position: relative;
+}
+#cv-edit #back-card .card-btn-group,
+#cv-edit #expectation-card .card-btn-group,
+#cv-edit #ref-card .card-btn-group{
+	position: absolute;	
+	display: none;
+	left: 100%;
+	top: 0;
+	padding: 5px 5px;
+	background: #ECECEC;
+	border: 1px solid #BEBEBE;
+	box-shadow: 1px 1px 4px rgba(0,0,0,.1), -2px 1px 1px rgba(0,0,0,0.1);
+	border-radius: 5px 0 0 5px;
+	transform: translate(-9px);
+}
+#cv-edit #profile-card .card-btn-group a,
+#cv-edit #back-card .card-btn-group a,
+#cv-edit #expectation-card .card-btn-group a,
+#cv-edit #ref-card .card-btn-group a{
+	font-size: 20px;
+	padding: 3px 5px;
+	color: #434649;
+	border-top-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	text-decoration: none;
+}
+#cv-edit #experience .items,
+#cv-edit #edu .items{
+	margin-bottom: 10px;
+}
+#cv-edit #experience #btn-show-formnew i,
+#cv-edit #edu #btn-show-formnew i,
+#cv-edit #back-card #skills #btn-show-formnew i,
+#cv-edit #back-card #languages #btn-show-formnew i,
+#cv-edit #expectation-card #function #btn-show-formnew i,
+#cv-edit #expectation-card #industry #btn-show-formnew i,
+#cv-edit #expectation-card #location #btn-show-formnew i,
+#cv-edit #expectation-card #salary #btn-show-formnew i,
+#cv-edit #expectation-card #job_term #btn-show-formnew i{
+ margin-right: 5px;
+}
+#cv-edit #back-card #skills #skills-collection,
+#cv-edit #back-card #languages #lang-collection,
+#cv-edit #expectation-card #function #collection,
+#cv-edit #expectation-card #industry #collection,
+#cv-edit #expectation-card #location #collection,
+#cv-edit #expectation-card #job_term #collection{
+  background-color: #FFF;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#cv-edit #languages #input-lang-name{
+	width: 240px;
+}
+#cv-edit #languages #input-lang-proficiency{
+	width: 200px;
+}
+#cv-edit #back-card #skills .form-edit .item,
+#cv-edit #back-card #languages .form-edit .item,
+#cv-edit #expectation-card #function .form-edit .item,
+#cv-edit #expectation-card #industry .form-edit .item,
+#cv-edit #expectation-card #location .form-edit .item,
+#cv-edit #expectation-card #job_term .form-edit .item{
+	float: left;
+	margin-right: 7px;
+	margin-bottom: 5px;
+}
+#cv-edit #skills .skill-detail,
+#cv-edit #languages .lang-proficiency{
+	font-size: 13px;
+	font-style: italic;
+}
+#cv-edit #back-card #skills #skill-name,
+#cv-edit #back-card #languages .lang{
+/* 	font-size: 16px; */
+/* 	color: #434649; */
+}
+#cv-edit #back-card .round-box-wrapper,
+#cv-edit #expectation-card .round-box-wrapper{
+	padding: 8px 10px 7px;
+	border-left: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	background-color: #ECECEC;
+	border-radius: 20px;
+}
+
+#cv-edit #languages .btn-remove,
+#cv-edit #languages .btn-add{
+	margin-left: 3px;
+}
+#cv-edit #skills .btn-remove,
+#cv-edit #languages .btn-remove,
+#cv-edit #expectation-card .btn-remove{
+	color: #7C7C7C; 
+	text-decoration: none; 
+	text-shadow: 0 1px 1px rgba(0,0,0,.2);
+}
+#cv-edit #expectation-card #function #input-function,
+#cv-edit #expectation-card #industry #input-industry,
+#cv-edit #expectation-card #location #input-location,
+#cv-edit #expectation-card #job_term #input-job-term{
+	width: 443px;
+}

@@ -1,0 +1,18 @@
+#cv-edit #back-card #summary:hover .card-btn-group,
+#cv-edit #back-card #edu .item:hover .card-btn-group,
+#cv-edit #back-card #experience .item:hover .card-btn-group,
+#cv-edit #back-card #skills:hover .card-btn-group,
+#cv-edit #back-card #languages:hover .card-btn-group,
+#cv-edit #expectation-card #function:hover .card-btn-group,
+#cv-edit #expectation-card #industry:hover .card-btn-group,
+#cv-edit #expectation-card #location:hover .card-btn-group,
+#cv-edit #expectation-card #salary:hover .card-btn-group,
+#cv-edit #expectation-card #job_term:hover .card-btn-group{
+	display: block;
+}
+#cv-edit #profile-card .card-btn-group a:hover,
+#cv-edit #back-card .card-btn-group a:hover,
+#cv-edit #expectation-card .card-btn-group a:hover,
+#cv-edit #ref-card .card-btn-group a:hover{
+	text-shadow: 1px 1px 4px rgba(0,0,0,.2)
+}

@@ -1,0 +1,11 @@
+p{
+	overflow-wrap: break-word;
+}
+
+a{
+	color: #27ae60;
+}
+
+a:hover{
+	color: #2ecc71;
+}

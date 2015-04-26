@@ -1,0 +1,83 @@
+<div class="items">						
+	<div class="content-show">
+		<h4 id="span-job-title" class="job-title"></h4>
+		<div>
+			<span class="prefix-cv-info">Company</span><span id="span-company-name" class="cv-info"></span>
+		</div>
+		<div>
+			<span class="prefix-cv-info">From</span>
+			<span id="span-from-date" class="cv-info" data-month="{{$work_experience->from_month}}" data-year="{{$work_experience->to_year}}">				
+			</span>
+			<span class="prefix-cv-info" style="margin-left: 13px;">To</span>
+			<span id="span-to-date" class="cv-info" data-month="{{$work_experience->to_month}}" data-year="{{$work_experience->to_year}}">
+				
+			</span>
+		</div>
+		<div>
+			<span class="prefix-cv-info">Locate in</span><span id="span-ex-location" class="cv-info"></span>
+		</div>										
+		<div>
+			<p id="span-job-description"></p>
+		</div>										
+		<div class="card-btn-group">							
+			<a href="javascript:onclick" id="btn-new-experience" class="glyphicon glyphicon-file"></a>
+			<a href="javascript:onclick" id="btn-edit-experience" class="glyphicon glyphicon-pencil"></a>
+		</div>
+	</div>
+	<div class="form-edit hide">
+		<form method="POST" action="http://localhost:8000/user/candidate/cv/edit/1/experience/" accept-charset="UTF-8" class="form-horizontal"><input name="_method" type="hidden" value="PUT">
+			<div class="form-group">
+				<label for="input-job-title" class="col-sm-3 control-label">Job Title</label>
+			    <div class="col-sm-8">
+			      <input type="text" class="form-control" id="input-job-title" value="{{$work_experience->job_title}}">
+			    </div>
+			</div>
+			<div class="form-group">
+				<label for="input-company-name" class="col-sm-3 control-label">Company name</label>
+			    <div class="col-sm-5">
+			      <input type="text" class="form-control" id="input-company-name" value="{{$work_experience->company_name}}">
+			    </div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-3 control-label">Duration</label>
+			    <div class="col-sm-9">
+			      <div class="pull-left clearfix">
+			      	<select type="text" class="form-control pull-left" id="input-ex-from-month" style="width: 120px;">
+			      		<option value="">---Month--</option>
+			      		@foreach(\Config::get('constant.months') as $month)
+			      			<option value="{{$month['num']}}" {{$work_experience->from_month == $month['num'] ? 'selected' : ''}}>{{$month['name']}}</option>
+			      		@endforeach
+			      	</select>
+			      	<input type="text" class="form-control pull-left" id="input-ex-from-year" value="{{$work_experience->from_year}}"  style="width: 60px; margin-left: 5px;" Placeholder="Year">
+			      </div> 
+			      <div class="pull-left" style="padding-top: 6px; font-weight: 600;">&nbsp;&nbsp;To&nbsp;&nbsp;</div>
+			      <div class="pull-left clearfix">
+			      	<select type="text" class="form-control pull-left" id="input-ex-to-month" style="width: 120px;">
+			      		<option value="">---Month--</option>
+			      		@foreach(\Config::get('constant.months') as $month)
+			      			<option value="{{$month['num']}}" {{$work_experience->to_month == $month['num'] ? 'selected' : ''}}>{{$month['name']}}</option>
+			      		@endforeach
+			      	</select>
+			      	<input type="text" class="form-control pull-left" id="input-ex-to-year" value="{{$work_experience->to_year}}"  style="width: 60px; margin-left: 5px;" Placeholder="Year">
+			      </div>
+			    </div>
+			</div>
+			<div class="form-group">
+				<label for="ex-location" class="col-sm-3 control-label">Location</label>
+			    <div class="col-sm-5">
+			      <input type="text" class="form-control" id="input-ex-location" name="ex-location" value="{{$work_experience->location}}">
+			    </div>
+			</div>
+			<div class="form-group">
+				<label for="input-job-description" class="col-sm-3 control-label">Description</label>
+			    <div class="col-sm-9">
+			      <textarea class="form-control" id="input-job-description">{{$work_experience->job_description}}</textarea>
+			    </div>
+			</div>
+			<div class="opt-controls">
+		      <button type="button" class="btn btn-primary btn-save">Save</button>
+		      <button type="button" class="btn btn-danger btn-cancel">Cancel</button>
+		  </div>
+	  {{\Form::close()}}
+	</div>
+</div>	
