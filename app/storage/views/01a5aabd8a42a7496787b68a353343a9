@@ -1,10 +1,10 @@
-@extends('layouts.default') @section('employer')
+ <?php $__env->startSection('employer'); ?>
 <div class="left-side-bar pull-left">
-	<div>@include('menu.menu')</div>
+	<div><?php echo $__env->make('menu.menu', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?></div>
 </div>
 <div id="employer" class="middle-wrapper pull-left">
 	<div id="job-list">
-		<div class="title-bar">Jobs Lists</div>
+		<div class="title-bar">Jobs List</div>
 		<form>
 			<div class="content-wrapper">
 				<table class="table table-condensed table-bordered">
@@ -17,18 +17,18 @@
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($jobs as $job)
+						<?php foreach($jobs as $job): ?>
 						<tr>
-							<td>{{$job->title}}</td>
-							<td>{{$job->published_date}}</td>
-							<td>{{$job->closing_date}}</td>
+							<td><?php echo $job->title; ?></td>
+							<td><?php echo $job->published_date; ?></td>
+							<td><?php echo $job->closing_date; ?></td>
 							<td>
 								<a href="">Edit</a><br>
 								<a href="">Delete</a><br> 
 								<a href="">Preview</a>
 							</td>
 						</tr>
-						@endforeach
+						<?php endforeach; ?>
 					</tbody>
 				</table>
 			</div>
@@ -36,4 +36,6 @@
 	</div>
 </div>
 <div class="right-side-bar pull-left"></div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,66 @@
+<?php // Menu depend on type of user.
+if (! Auth::guest () && Auth::user ()->role === null) 
+{
+	switch (Auth::user ()->user_type) 
+	{
+		case 1 : // Employer
+?>
+		<?php foreach(Config::get('employer.menu') as $menu => $url): ?>
+			<ul class="list-unstyled">
+			<?php if(is_array($url)): ?>
+				<li><h3 class="title"><?php echo $menu; ?></h3>
+					<ul class="list-unstyled">
+					<?php foreach($url as $menu => $url): ?>
+						<li><a href="<?php echo $url; ?>"><?php echo $menu; ?></a><hr class="menu-seperator"></li>
+					<?php endforeach; ?>
+					</ul>
+				</li>
+			<?php else: ?>
+				<li><h3 class="title"><a href="<?php echo $url; ?>"><?php echo $menu; ?></a></h3></li>
+			<?php endif; ?>
+			</ul>
+		<?php endforeach; ?>
+<?php
+			break;
+		case 2 : // Employee
+?>
+		<?php foreach(Config::get('candidate.menu') as $menu => $url): ?>
+			<ul class="list-unstyled">
+			<?php if(is_array($url)): ?>
+				<li><h3 class="title"><?php echo $menu; ?></h3>
+					<ul class="list-unstyled">
+					<?php foreach($url as $menu => $url): ?>
+						<li><a href="<?php echo $url; ?>"><?php echo $menu; ?></a><hr class="menu-seperator"></li>
+					<?php endforeach; ?>
+					</ul>
+				</li>
+			<?php else: ?>
+				<li><h3 class="title"><a href="<?php echo $url; ?>"><?php echo $menu; ?></a></h3></li>
+			<?php endif; ?>
+			</ul>
+		<?php endforeach; ?>
+<?php
+			break;
+	}
+}
+else
+{ 
+?>
+		<?php foreach(Config::get('constant.menu') as $menu => $url): ?>
+			<ul class="list-unstyled">
+			<?php if(is_array($url)): ?>
+				<li><h3 class="title"><?php echo $menu; ?></h3>
+					<ul class="list-unstyled">
+					<?php foreach($url as $menu => $url): ?>
+						<li><a href="<?php echo $url; ?>"><?php echo $menu; ?></a><hr class="menu-seperator"></li>
+					<?php endforeach; ?>
+					</ul>
+				</li>
+			<?php else: ?>
+				<li><h3 class="title"><a href="<?php echo $url; ?>"><?php echo $menu; ?></a></h3></li>
+			<?php endif; ?>
+			</ul>
+		<?php endforeach; ?>
+<?php
+}
+?>
